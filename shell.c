@@ -6,7 +6,6 @@
 
 #define MAX_INPUT 1024
 #define PROMPT "$ "
-#define HISTORY_LENGTH 1024
 #define MAX_ARGS 1024 
 #define TOKEN_SEP " \n"
 #define PATH_MAX 4096
