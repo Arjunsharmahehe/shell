@@ -25,7 +25,7 @@ int parse_input(char *input, char **args){
 }
 
 int eval_commands(char *cmd, char **cmd_args){
-    printf("Executing command: %s\n", cmd);
+    // printf("Executing command: %s\n", cmd);
 
     int status;
     pid_t pid;
@@ -112,11 +112,11 @@ int main(void){
         }
         int args_read = parse_input(input, args);
         
-        if(args[0] == NULL) break;
-        for(int i = 0; i < MAX_ARGS; i++){
-            if(args[i] == NULL) break;
-            printf("args[%d] = %s\n", i, args[i]);
-        }
+        // if(args[0] == NULL) break;
+        // for(int i = 0; i < MAX_ARGS; i++){
+        //     if(args[i] == NULL) break;
+        //     printf("args[%d] = %s\n", i, args[i]);
+        // }
         
         char *cmd = args[0];
         char **cmd_args = args;
