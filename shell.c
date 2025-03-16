@@ -79,7 +79,7 @@ void execute_builtin(char *cmd, char **args, size_t args_read) {
 
 void refresh_cwd(void) {
     if (getcwd(CWD, sizeof(CWD)) == NULL) {
-      fprintf(stderr, "Error: Could not read working dir");
+      fprintf(stderr, "Error: Could not read working dir\n");
       exit(1);
     }
 }
@@ -87,7 +87,7 @@ void refresh_cwd(void) {
 void builtin_impl_cd(char **args, size_t args_read) {
     char *new_dir = *args;
     if (chdir(new_dir) != 0) {
-      fprintf(stderr, "Error: Could not change directory");
+      fprintf(stderr, "Error: Could not change directory\n");
       exit(1);
     }
     refresh_cwd();
